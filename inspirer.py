@@ -4,8 +4,8 @@ import time
 import pyautogui as pog
 
 websites = ["https://parade.com/973277/jessicasager/inspirational-quotes/"]
-totalWebsites = 1
-max_websites = 25
+totalWebsites = 1 # don't change this
+max_websites = 25 # but you can change this ;)
 quotes = []
 
 i = 0
