@@ -33,7 +33,9 @@ while True:
 
     with open("quotes.txt", "a") as f:
         for quote in quotes:
-            f.write(quote + "\n")
+            try:
+                f.write(quote + "\n")
+            except: pass
     
     i += 1
     if i  == totalWebsites:
