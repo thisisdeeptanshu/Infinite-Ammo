@@ -8,6 +8,8 @@ totalWebsites = 1 # don't change this
 max_websites = 25 # but you can change this ;)
 quotes = []
 
+with open("quotes.txt", "w") as f: pass
+
 i = 0
 while True:
     driver = webdriver.Chrome("chromedriver.exe")
@@ -28,9 +30,12 @@ while True:
         except:
             pass
     driver.close()
+
+    with open("quotes.txt", "a") as f:
+        for quote in quotes:
+            f.write(quote + "\n")
+    
     i += 1
     if i  == totalWebsites:
         break
-
-with open("quotes.txt", "w") as f:
-    f.writelines(quotes)
+    quotes = []
